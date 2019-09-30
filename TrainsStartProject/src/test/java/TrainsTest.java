@@ -7,6 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 
+/**
+ * @author Youri Pellicaan & Koen van der Tuin
+ */
+
 public class TrainsTest {
 
 //    private ArrayList<PassengerWagon> pwList;

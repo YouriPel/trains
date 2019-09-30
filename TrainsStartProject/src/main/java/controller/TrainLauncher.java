@@ -5,6 +5,10 @@ import model.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Youri Pellicaan & Koen van der Tuin
+ */
+
 public class TrainLauncher {
 
     public static void main(String[] args) {

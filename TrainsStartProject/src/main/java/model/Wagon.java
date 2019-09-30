@@ -1,5 +1,9 @@
 package model;
 
+/**
+ * @author Youri Pellicaan & Koen van der Tuin
+ */
+
 public class Wagon {
     private int wagonId;
     private Wagon previousWagon;
@@ -12,11 +16,18 @@ public class Wagon {
     public Wagon getLastWagonAttached() {
         // find the last wagon of the row of wagons attached to this wagon
         // if no wagons are attached return this wagon
-        return null;
+        Wagon currentWagon = null;
+        while (previousWagon != null){
+            currentWagon = previousWagon;
+            previousWagon = currentWagon.previousWagon;
+        }
+
+        return currentWagon;
     }
 
     public void setNextWagon(Wagon nextWagon) {
         // when setting the next wagon, set this wagon to be previous wagon of next wagon
+        nextWagon = nextWagon.previousWagon;
 
     }
 
@@ -35,10 +46,18 @@ public class Wagon {
     public int getWagonId() {
         return wagonId;
     }
-
+//Get total of Wagons Attached
     public int getNumberOfWagonsAttached() {
 
-        return 0;
+        int totalAttached = 0;
+        Wagon currentWagon = null;
+        while (previousWagon != null){
+            totalAttached++;
+            currentWagon = previousWagon;
+            previousWagon = currentWagon.previousWagon;
+        }
+
+        return totalAttached;
     }
 
     public boolean hasNextWagon() {

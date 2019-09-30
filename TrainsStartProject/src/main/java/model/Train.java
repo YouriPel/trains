@@ -1,5 +1,9 @@
 package model;
 
+/**
+ * @author Youri Pellicaan & Koen van der Tuin
+ */
+
 public class Train {
     private Locomotive engine;
     private Wagon firstWagon;
