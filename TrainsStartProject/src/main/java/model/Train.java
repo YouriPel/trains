@@ -25,7 +25,7 @@ public class Train {
        /*  when wagons are hooked to or detached from a train,
          the number of wagons of the train should be reset
          this method does the calculation */
-
+        numberOfWagons -= 1;
     }
 
     public int getNumberOfWagons() {
@@ -39,13 +39,13 @@ public class Train {
         return (firstWagon == null);
     }
 
-    /*public boolean isPassengerTrain() {
+    public boolean isPassengerTrain() {
         return firstWagon instanceof PassengerWagon;
-    }*/
+    }
 
-    /*public boolean isFreightTrain() {
+    public boolean isFreightTrain() {
         return firstWagon instanceof FreightWagon;
-    }*/
+    }
 
     public int getPositionOfWagon(int wagonId) {
         // find a wagon on a train by id, return the position (first wagon had position 1)
@@ -67,6 +67,9 @@ public class Train {
         /* give the total number of seats on a passenger train
          for freight trains the result should be 0 */
 
+        if(this.isPassengerTrain()){
+            return 0;
+        }
             return 0;
 
     }
