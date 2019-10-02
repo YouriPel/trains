@@ -29,10 +29,23 @@ public class Train {
        /*  when wagons are hooked to or detached from a train,
          the number of wagons of the train should be reset
          this method does the calculation */
+        numberOfWagons = 0;
+
+        //todo if wagon added
+
+
+        //todo if wagon removed
+        Wagon currentWagon = getFirstWagon();
+        System.out.println(currentWagon);
+        while (currentWagon != null){
+
+            currentWagon = currentWagon.getNextWagon();
+        }
 
     }
 
     public int getNumberOfWagons() {
+        resetNumberOfWagons();
         return numberOfWagons;
     }
 
