@@ -3,7 +3,9 @@ import model.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
 
@@ -53,7 +55,7 @@ public class TrainsTest {
     @Test
     public void checkNumberOfSeatsOnTrain() {
         makeTrains();
-        assertEquals( 730, firstPassengerTrain.getNumberOfSeats());
+        assertEquals(730, firstPassengerTrain.getNumberOfSeats());
         System.out.println(firstPassengerTrain);
     }
 
@@ -62,7 +64,7 @@ public class TrainsTest {
         makeTrains();
         int position = 1;
         for (PassengerWagon pw : pwList) {
-            assertEquals( position, firstPassengerTrain.getPositionOfWagon(pw.getWagonId()));
+            assertEquals(position, firstPassengerTrain.getPositionOfWagon(pw.getWagonId()));
             position++;
         }
 
@@ -72,8 +74,8 @@ public class TrainsTest {
     public void checkHookOneWagonOnTrainFront() {
         makeTrains();
         Shunter.hookWagonOnTrainFront(firstPassengerTrain, new PassengerWagon(21, 140));
-        assertEquals( 7, firstPassengerTrain.getNumberOfWagons(), "Train should have 7 wagons");
-        assertEquals( 1, firstPassengerTrain.getPositionOfWagon(21));
+        assertEquals(7, firstPassengerTrain.getNumberOfWagons(), "Train should have 7 wagons");
+        assertEquals(1, firstPassengerTrain.getPositionOfWagon(21));
 
     }
 
@@ -84,7 +86,7 @@ public class TrainsTest {
         Shunter.hookWagonOnWagon(w1, new PassengerWagon(43, 140));
         Shunter.hookWagonOnTrainRear(firstPassengerTrain, w1);
         assertEquals(6, firstPassengerTrain.getNumberOfWagons(), "Train should have still have 6 wagons, capacity reached");
-        assertEquals( -1, firstPassengerTrain.getPositionOfWagon(43));
+        assertEquals(-1, firstPassengerTrain.getPositionOfWagon(43));
     }
 
     @Test
@@ -92,9 +94,9 @@ public class TrainsTest {
         makeTrains();
         Shunter.moveOneWagon(firstPassengerTrain, secondPassengerTrain, pwList.get(3));
         assertEquals(5, firstPassengerTrain.getNumberOfWagons(), "Train should have 5 wagons");
-        assertEquals( -1, firstPassengerTrain.getPositionOfWagon(32));
+        assertEquals(-1, firstPassengerTrain.getPositionOfWagon(32));
         assertEquals(1, secondPassengerTrain.getNumberOfWagons(), "Train should have 1 wagon");
-        assertEquals( 1, secondPassengerTrain.getPositionOfWagon(32));
+        assertEquals(1, secondPassengerTrain.getPositionOfWagon(32));
 
     }
 
@@ -106,9 +108,58 @@ public class TrainsTest {
         Shunter.hookWagonOnTrainRear(secondPassengerTrain, w1);
         Shunter.moveAllFromTrain(firstPassengerTrain, secondPassengerTrain, pwList.get(2));
         assertEquals(2, firstPassengerTrain.getNumberOfWagons(), "Train should have 2 wagons");
-        assertEquals( 2, firstPassengerTrain.getPositionOfWagon(24));
+        assertEquals(2, firstPassengerTrain.getPositionOfWagon(24));
         assertEquals(6, secondPassengerTrain.getNumberOfWagons(), "Train should have 6 wagons");
-        assertEquals( 4, secondPassengerTrain.getPositionOfWagon(32));
+        assertEquals(4, secondPassengerTrain.getPositionOfWagon(32));
     }
 
+    @Test
+    public void checkMaxWeightOnTrain() {
+        makeFreightTrain();
+
+        assertEquals(500, firstFreightTrain.getTotalMaxWeight());
+        assertEquals(0, firstFreightTrain.getNumberOfSeats());
+    }
+
+    private void makeFreightTrain() {
+        Locomotive engine = new Locomotive(1, 512);
+        firstFreightTrain = new Train(engine, "Zuid", "Noord");
+        FreightWagon one = new FreightWagon(2, 235);
+        FreightWagon two = new FreightWagon(3, 135);
+        FreightWagon three = new FreightWagon(4, 130);
+
+        ArrayList<FreightWagon> freightTrainList = new ArrayList<>();
+        freightTrainList.add(one);
+        freightTrainList.add(two);
+        freightTrainList.add(three);
+
+        for (Wagon w : freightTrainList) {
+            Shunter.hookWagonOnTrainRear(firstFreightTrain, w);
+        }
+    }
+
+    @Test
+    public void checkGetWagonOnPosition() {
+        makeFreightTrain();
+
+        boolean errorThrown = false;
+        try {
+            firstFreightTrain.getWagonOnPosition(5);
+        } catch (IndexOutOfBoundsException e) {
+            errorThrown = true;
+        }
+
+        assertTrue(errorThrown);
+    }
+
+    @Test
+    public void checkIterator() {
+        makeFreightTrain();
+
+        System.out.println(firstFreightTrain);
+        for (Wagon w : firstFreightTrain) {
+            System.out.println(w.getWagonId());
+        }
+
+    }
 }

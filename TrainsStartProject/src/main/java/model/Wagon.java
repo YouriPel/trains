@@ -39,28 +39,12 @@ public abstract class Wagon {
         return totalAttached;
     }
 
-    public Wagon getPreviousWagon() {
-        return previousWagon;
-    }
-
-    public void setPreviousWagon(Wagon previousWagon) {
-        this.previousWagon = previousWagon;
-    }
-
     public Wagon getNextWagon() {
         return nextWagon;
     }
 
     public int getWagonId() {
         return wagonId;
-    }
-
-    public boolean hasNextWagon() {
-        return !(nextWagon == null);
-    }
-
-    public boolean hasPreviousWagon() {
-        return !(previousWagon == null);
     }
 
     @Override

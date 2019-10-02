@@ -189,7 +189,7 @@ public class Shunter {
         // do necessary checks and adjustments to trains and wagon
 
         if (from.getPositionOfWagon(wagon.getWagonId()) > 0) {
-            if(isSuitableWagon(to,wagon) && hasPlaceForWagons(to, wagon)){
+            if(isSuitableWagon(to,wagon) && hasPlaceForWagons(to, wagon) && hasPlaceForOneWagon(to, wagon)){
                 detachOneWagon(from,wagon);
                 hookWagonOnTrainRear(to,wagon);
                 from.resetNumberOfWagons();
