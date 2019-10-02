@@ -96,33 +96,34 @@ public class Train {
     public int getNumberOfSeats() {
         /* give the total number of seats on a passenger train
          for freight trains the result should be 0 */
+        int totalSeats = 0;
 
-        if (this.firstWagon instanceof FreightWagon) {
-            return 0;
+        if (isFreightTrain()) {
+            return totalSeats;
         }
 
-        Wagon currentWagon = this.firstWagon;
-        int totalNumberOfSeats = 0;
-        if (isPassengerTrain()) {
-            while (currentWagon != null) {
-                PassengerWagon p = (PassengerWagon) currentWagon;
-                totalNumberOfSeats += p.getNumberOfSeats();
+        PassengerWagon currentWagon = (PassengerWagon) this.firstWagon;
 
-            }
+        while (currentWagon != null) {
+            totalSeats += currentWagon.getNumberOfSeats();
+            currentWagon = ((PassengerWagon) currentWagon.nextWagon);
         }
-        return totalNumberOfSeats;
 
+        return totalSeats;
     }
 
     public int getTotalMaxWeight() {
         /* give the total maximum weight of a freight train
          for passenger trains the result should be 0 */
+
         Wagon currentWagon = this.firstWagon;
         int totalMaxWeight = 0;
+
         if (isFreightTrain()) {
             while (currentWagon != null) {
                 FreightWagon f = (FreightWagon) currentWagon;
                 totalMaxWeight += f.getMaxWeight();
+                currentWagon = currentWagon.nextWagon;
             }
         }
         return totalMaxWeight;

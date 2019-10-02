@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0cd2e84-2c87-47ac-a9dc-cfc85c6b852a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TrainLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TrainLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/FreightWagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/FreightWagon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/PassengerWagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PassengerWagon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Shunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Shunter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Train.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Wagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Wagon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TrainsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TrainsTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TrainsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+            <state relative-caret-position="172">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,32 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Wagon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Train.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/Shunter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="97" column="53" lean-forward="true" selection-start-line="97" selection-start-column="53" selection-end-line="97" selection-end-column="53" />
-              <folding>
-                <element signature="e#459#460#0" expanded="true" />
-                <element signature="e#492#493#0" expanded="true" />
-                <element signature="e#543#544#0" expanded="true" />
-                <element signature="e#587#588#0" expanded="true" />
-                <element signature="e#910#911#0" expanded="true" />
-                <element signature="e#947#948#0" expanded="true" />
-                <element signature="e#1348#1349#0" expanded="true" />
-                <element signature="e#1391#1392#0" expanded="true" />
-                <element signature="e#3894#3895#0" expanded="true" />
-                <element signature="e#3923#3924#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="106">
+              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
             </state>
           </provider>
         </entry>
@@ -96,14 +73,21 @@
         <option value="$PROJECT_DIR$/src/model/Train.java" />
         <option value="$PROJECT_DIR$/src/model/Wagon.java" />
         <option value="$PROJECT_DIR$/src/controller/TrainLauncher.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TrainsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/TrainLauncher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Shunter.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/FreightWagon.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/PassengerWagon.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Wagon.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Train.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Wagon.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TrainsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Shunter.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -211,7 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TrainsTest.checkNumberOfWagonsOnTrain">
+  <component name="RunManager" selected="JUnit.TrainsTest">
     <configuration name="TrainLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="controller.TrainLauncher" />
       <module name="TrainsSolution" />
@@ -240,8 +224,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TrainsTest.checkNumberOfWagonsOnTrain" />
         <item itemvalue="JUnit.TrainsTest" />
+        <item itemvalue="JUnit.TrainsTest.checkNumberOfWagonsOnTrain" />
         <item itemvalue="Application.TrainLauncher" />
       </list>
     </recent_temporary>
@@ -268,39 +252,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TrainsTest_checkNumberOfWagonsOnTrain - 2019.10.02 at 17h 40m 27s.xml">
+    <history-entry file="TrainsTest_checkNumberOfWagonsOnTrain - 2019.10.02 at 20h 22m 34s.xml">
       <configuration name="TrainsTest.checkNumberOfWagonsOnTrain" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TrainsTest_checkNumberOfWagonsOnTrain - 2019.10.02 at 17h 41m 07s.xml">
+    <history-entry file="TrainsTest_checkNumberOfWagonsOnTrain - 2019.10.02 at 20h 23m 59s.xml">
       <configuration name="TrainsTest.checkNumberOfWagonsOnTrain" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TrainsTest_checkNumberOfWagonsOnTrain - 2019.10.02 at 17h 41m 35s.xml">
+    <history-entry file="TrainsTest_checkNumberOfWagonsOnTrain - 2019.10.02 at 20h 43m 51s.xml">
       <configuration name="TrainsTest.checkNumberOfWagonsOnTrain" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TrainsTest_checkNumberOfWagonsOnTrain - 2019.10.02 at 17h 44m 40s.xml">
-      <configuration name="TrainsTest.checkNumberOfWagonsOnTrain" configurationId="JUnit" />
+    <history-entry file="TrainsTest - 2019.10.02 at 20h 44m 02s.xml">
+      <configuration name="TrainsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TrainsTest_checkNumberOfWagonsOnTrain - 2019.10.02 at 17h 45m 45s.xml">
-      <configuration name="TrainsTest.checkNumberOfWagonsOnTrain" configurationId="JUnit" />
+    <history-entry file="TrainsTest - 2019.10.02 at 20h 44m 53s.xml">
+      <configuration name="TrainsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TrainsTest_checkNumberOfWagonsOnTrain - 2019.10.02 at 17h 46m 05s.xml">
-      <configuration name="TrainsTest.checkNumberOfWagonsOnTrain" configurationId="JUnit" />
+    <history-entry file="TrainsTest - 2019.10.02 at 20h 48m 11s.xml">
+      <configuration name="TrainsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TrainsTest_checkNumberOfWagonsOnTrain - 2019.10.02 at 17h 47m 52s.xml">
-      <configuration name="TrainsTest.checkNumberOfWagonsOnTrain" configurationId="JUnit" />
+    <history-entry file="TrainsTest - 2019.10.02 at 20h 48m 35s.xml">
+      <configuration name="TrainsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TrainsTest_checkNumberOfWagonsOnTrain - 2019.10.02 at 17h 48m 21s.xml">
-      <configuration name="TrainsTest.checkNumberOfWagonsOnTrain" configurationId="JUnit" />
+    <history-entry file="TrainsTest - 2019.10.02 at 20h 49m 52s.xml">
+      <configuration name="TrainsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TrainsTest_checkNumberOfWagonsOnTrain - 2019.10.02 at 17h 48m 45s.xml">
-      <configuration name="TrainsTest.checkNumberOfWagonsOnTrain" configurationId="JUnit" />
+    <history-entry file="TrainsTest - 2019.10.02 at 20h 50m 06s.xml">
+      <configuration name="TrainsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TrainsTest_checkNumberOfWagonsOnTrain - 2019.10.02 at 18h 54m 19s.xml">
-      <configuration name="TrainsTest.checkNumberOfWagonsOnTrain" configurationId="JUnit" />
+    <history-entry file="TrainsTest - 2019.10.02 at 20h 51m 01s.xml">
+      <configuration name="TrainsTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53737000" />
+    <option name="totallyTimeSpent" value="58140000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -325,7 +309,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32963988" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32839838" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
@@ -372,13 +356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Shunter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="90" column="39" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/FreightWagon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -401,27 +378,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TrainsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Wagon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        <state relative-caret-position="268">
+          <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Train.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="97" column="53" lean-forward="true" selection-start-line="97" selection-start-column="53" selection-end-line="97" selection-end-column="53" />
+        <state relative-caret-position="150">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
           <folding>
             <element signature="e#459#460#0" expanded="true" />
             <element signature="e#492#493#0" expanded="true" />
@@ -429,11 +396,28 @@
             <element signature="e#587#588#0" expanded="true" />
             <element signature="e#910#911#0" expanded="true" />
             <element signature="e#947#948#0" expanded="true" />
-            <element signature="e#1348#1349#0" expanded="true" />
-            <element signature="e#1391#1392#0" expanded="true" />
-            <element signature="e#3894#3895#0" expanded="true" />
-            <element signature="e#3923#3924#0" expanded="true" />
+            <element signature="e#1093#1094#0" expanded="true" />
+            <element signature="e#1193#1194#0" expanded="true" />
+            <element signature="e#1289#1290#0" expanded="true" />
+            <element signature="e#3596#3597#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TrainsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Shunter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
         </state>
       </provider>
     </entry>

@@ -12,13 +12,13 @@ public abstract class Wagon {
     public Wagon getLastWagonAttached() {
         // find the last wagon of the row of wagons attached to this wagon
         // if no wagons are attached return this wagon
-        Wagon currentWagon = this;
+        Wagon lastWagon = this;
 
-        while (currentWagon != null) {
-            currentWagon = currentWagon.nextWagon;
+        while (lastWagon.nextWagon != null) {
+            lastWagon = lastWagon.nextWagon;
         }
 
-        return currentWagon;
+        return lastWagon;
     }
 
     public void setNextWagon(Wagon nextWagon) {
@@ -30,7 +30,6 @@ public abstract class Wagon {
     public int getNumberOfWagonsAttached() {
         int totalAttached = 0;
         Wagon currentWagon = this.nextWagon;
-
 
         while (currentWagon != null){
             currentWagon = currentWagon.nextWagon;
