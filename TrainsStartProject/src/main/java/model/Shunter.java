@@ -10,21 +10,43 @@ public class Shunter {
     /* four helper methods than are used in other methods in this class to do checks */
     private static boolean isSuitableWagon(Train train, Wagon wagon) {
         // trains can only exist of passenger wagons or of freight wagons
-        return true;
+        if (train.getFirstWagon() instanceof PassengerWagon && wagon instanceof PassengerWagon){
+            return true;
+        }
+
+        if(train.getFirstWagon() instanceof FreightWagon && wagon instanceof FreightWagon){
+            return true;
+        }
+        return false;
     }
 
     private static boolean isSuitableWagon(Wagon one, Wagon two) {
         // passenger wagons can only be hooked onto passenger wagons
-        return true;
+        if(one instanceof  PassengerWagon && two instanceof PassengerWagon) {
+            return true;
+        }else if(one instanceof FreightWagon && two instanceof FreightWagon){
+            return true;
+        }
+        return false;
     }
 
     private static boolean hasPlaceForWagons(Train train, Wagon wagon) {
         // the engine of a train has a maximum capacity, this method checks for a row of wagons
+        int maxWagons = train.getEngine().getMaxWagons();
+        if(train.getNumberOfWagons() <= maxWagons-1){
+            return false;
+        }
+
         return true;
     }
 
     private static boolean hasPlaceForOneWagon(Train train, Wagon wagon) {
         // the engine of a train has a maximum capacity, this method checks for one wagon
+        int maxWagons = train.getEngine().getMaxWagons();
+        if(train.getNumberOfWagons() >= maxWagons){
+            return false;
+        }
+
         return true;
     }
 
@@ -34,6 +56,12 @@ public class Shunter {
          find the last wagon of the train
          hook the wagon on the last wagon (see Wagon class)
          adjust number of Wagons of Train */
+        if(hasPlaceForWagons(train,wagon) && isSuitableWagon(train,wagon)){
+            Wagon lastWagon = train.getFirstWagon().getLastWagonAttached();
+            lastWagon.setNextWagon(wagon);
+            train.resetNumberOfWagons();
+            return true;
+        }
 
          return false;
 
